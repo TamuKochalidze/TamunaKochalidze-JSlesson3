@@ -7,14 +7,17 @@
 // წაშალეთ მასივიდან პირველი და ბოლო ელემენტი;
 // დაბეჭდეთ მასივისი ახალი ელემენტები.
 
-// let item = [5, 25, 89, 120, 36];
-// let newItem = item.push('javascript', 'python');
-// let addStringItem = item.unshift("html", "css");
-// let removeElsestart = item.shift();
-// let removeElStart = item.pop();
+// let array = [5, 25, 89, 120, 36];
+// array.push('javascript', 'python');
+// array.unshift('HTML', 'css');
 
-// console.log(item.length);
-// console.log(item);
+// console.log(array);
+
+// array.shift();
+// array.pop();
+
+// console.log(array);
+
 
 //------------------------
 
@@ -29,26 +32,19 @@
 //   წაშალეთ მასივიდან პირველი და ბოლო ელემენტი;
 //   გამოიტანეთ ეკრანზე, თუ რამდენი ელემენტი დარჩა მასივში;
 
-let fruits = ["Orange", "Bananas", "Pear"];
-console.log(fruits.length);
+// let fruits = ["Orange", "Bananas", "Pear"];
+// console.log(fruits);
 
-fruits2.push("Aplle", "Pineapple");
-console.log(newFruits2);
+// fruits.push("Aplle", "Pineapple");
+// fruits.unshift('Watermelon');
+// console.log(fruits);
 
-// let pushFruit = fruits.push("Apple", "Pineapple");
-// console.log(pushFruit);
-
-// let addFruit = fruits.unshift("watermelon");
-// let splicefuit = fruits.sprlice(3, 0, "Mango");
-// let popFruit = fruits.pop();
-// let shifFruit = fruits.shift();
-
-// console.log(fruits.length);
+// fruits.splice(2,0, 'Mango');
+// fruits.shift();
+// fruits.pop();
 // console.log(fruits);
 
 //-----------------------------------------------------------------------
-
-
 
 
 //დავალება 3
@@ -57,23 +53,9 @@ console.log(newFruits2);
 // let array = [12, 25, 3, 6, 8, 14, 7, 23];
 // map-ის გამოყენებით შექმენით ახალი მასივი, რომელშიც array მასივიდან თითოეული ელემენტი იქნება 3-ზე გაყოფილი;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// let array = [12, 25, 3, 6, 8, 14, 7, 23];
+// let newArray1 = array1.map(number => newNumber * 3);
+// console.log(newArray1);
 
 //---------------------------------------------------
 
@@ -83,15 +65,22 @@ console.log(newFruits2);
 // let array = ["hello", 125, "javascript", "html", 43, "css", "scss", "bootstrap", 88, 59, "python"];
 // filter-ის გამოყენებით გაფილთრეთ და გამოიტანეთ მარტო ციფრები; 
 
+// let array = ["hello", 125, "javascript", "html", 43, "css", "scss", "bootstrap", 88, 59, "python"];
+// let newArray = array.filter(item => typeof item === 'number');
+// console.log(newArray); 
 
 //------------------------------------------------------
-
 
 //დავალება 5
 // 5.მოცემულია მასივი:
 
 // let languages = ['html', 'css', 'javascript', 'python, 'php'];
 // ფილტრის საშულებით გაფილტრეთ და გამოიტანეთ მარტო ის სიტყვები რომლების სიმბოლოების რაოდენობა იქნება 3-ზე მეტი;
+
+
+// let languages = ['html', 'css', 'javascript', 'python', 'php'];
+// let newArrayOfLanguages = languages.filter(language => language.length > 3);
+// console.log(newArrayOfLanguages);
 
 
 //----------------------------------------------------------
@@ -103,14 +92,31 @@ console.log(newFruits2);
 
 // Reduce-ის საშუალებით მიიღეთ ერთი კომბინირებული სტრინგი(academy of digital industries);
 
+// let array= ['academy', 'of', 'digital', 'industries'].reduce((accumulator,currentValue)=>accumulator + ' ' + currentValue, '');
+
+// console.log(array);
 
 //---------------------------------------------------
+
 //დავალება 7
 
 // 7. მოცემულია მასივი:
 // let item = [12, ‘google’, 32, null, ‘yahoo’, 25];
 
 // შექმენით ახალი მასივი map ფუნქციის გამოყენებით შემდეგი ლოგიკით: თუ ელემენტი არის რიცხვი ამ მასივში უნდა იყოს ამ რიცხვის კვადრატი. თუ ელემენტი არის ტექსტი, მაშინ ახალ მასივში უნდა იყოს ეს ტექსტი დიდი ასოებით. სხვა შემთხვევაში ელემენტები უნდა დაემატოს უცვლელად;
+
+// let item = [12, 'google', 32, null, 'yahoo', 25];
+
+// let newItem1 = item.map( item => {
+//     if(typeof item == 'number') {
+//         return item*item;
+//     } else if ( typeof item == 'string'){
+//         return item.toUpperCase();
+//     } else {
+//         return item;
+//     }
+// })
+// console.log(newItem1);
 
 
 //--------------------------------------------------
@@ -122,3 +128,9 @@ console.log(newFruits2);
 
 // Filter მეთოდის საშუალებით დააბრუნეთ მასივი, რომელიც შედგება ისეთი სიტყვებისგან რომელიც შეიცავს ასო m-ს ან M-ს;
 
+// let words = ['Madrid', 'Rome', 'Milan', 'Berlin'];
+// let newWordsArray = words.filter(item1 => item1.includes('m') || item1.includes('M'));     // item1.toLowerCase().includes('m')); 
+
+// console.log(newWordsArray);
+
+//-----------------------------------------------------
